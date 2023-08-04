@@ -21,7 +21,7 @@ function Player:init()
     self.Many_Bullets = {}
     self.bullet_image = love.graphics.newImage('sprites/blt.png')
 
-    self.exp1 = love.graphics.newImage('sprites/exp1.png')
+    self.exp1 = love.graphics.newImage('sprites/EXP1.png')
 
     self.shot = love.audio.newSource('music/shot.mp3', 'static')
     self.alert = love.audio.newSource('music/alert.mp3', 'static')
