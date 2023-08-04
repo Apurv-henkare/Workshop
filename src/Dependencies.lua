@@ -5,6 +5,9 @@ Event = require 'lib/knife.event'
 wf= require 'lib/windfield/windfield' 
 anim8 =require 'lib/anim8/anim8'
 
+Camera = require "lib/hump/camera"
+
+
 
 require 'src/constant'
 require 'src/Player'

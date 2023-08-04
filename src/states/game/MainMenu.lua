@@ -14,6 +14,7 @@ local highlighted = 1
 function MainMenu:init()
     self.image = love.graphics.newImage('sprites/menu.jpg')
     counter_var = 0
+   
 
 end
 
@@ -70,7 +71,13 @@ function MainMenu:render()
 
     love.graphics.setColor(1, 1, 1, 1)
 
-    love.graphics.setFont(love.graphics.newFont(30))
+    love.graphics.setFont(love.graphics.newFont("font.otf",50))
+    love.graphics.setColor(1,0.3,0.9)
+    love.graphics.printf("Astro Assault", 0, VIRTUAL_HEIGHT / 2 + 50 - 250, VIRTUAL_WIDTH, 'center')
+    love.graphics.setColor(1,1,1)
+
+    
+    love.graphics.setFont(love.graphics.newFont("font.otf",30))
     if highlighted == 1 then
         love.graphics.setColor(103 / 255, 1, 1, 1)
     end

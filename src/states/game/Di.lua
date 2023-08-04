@@ -22,10 +22,12 @@ function Di:init()
                "the hazardous debris to pave the way for Earth's defense fleet."},
         [2] = {"The Cosmic Invaders, relentless in their pursuit of universal domination, unleash swarms ", 
                 "of formidable alien spacecraft. Utilizing your Indian ingenuity, engage in intense dogfights,",
-                "prove that humanity's resolve is not to be underestimated."},
+                "prove that humanity's resolve is not to be underestimated.","\n",
+                "DESTROY ALL ENEMIES !!"},
         [3] = {"In the heart of enemy territory, you confront the Galactic Tyrant, a colossal and malevolent",
                 "extraterrestrial being. Utilize the Vajra's resonance disruptor to weaken its armor",
-                "Dodge its devastating attacks and target its exposed areas. "},
+                "Dodge its devastating attacks and target its exposed areas. ","\n",
+                "FINISH HIM !!"},
         [4] ={"With a final, mighty blow, Captain Apurv obliterates the Galactic Tyrant, securing victory",
               "for Earth and India. The universe rejoices in their triumph",
               "\n",
@@ -124,7 +126,7 @@ end
 function Di:render()
     love.graphics.setBackgroundColor(1, 1, 1, 0.2)
     love.graphics.setColor(1, 1, 1)
-    love.graphics.setFont(love.graphics.newFont(24)) -- Adjust font size as desired
+    love.graphics.setFont(love.graphics.newFont("font.otf",24)) -- Adjust font size as desired
     -- love.graphics.print(currentText, 100, 100)
     love.graphics.setLineWidth(5)
     love.graphics.rectangle('line',40,80,1280-80,270,30)

@@ -3,6 +3,14 @@ counter_var = 0
 
 require 'src/Dependencies'
 
+
+ shake_duration = 0.5
+ shake_intensity = 10
+ shake_timer = 0
+ shake_offset_x, shake_offset_y = 0, 0
+
+local rectangle = { x = 200, y = 150, width = 100, height = 80 }
+
 -- Global variables--
 
 function love.load()
@@ -15,11 +23,14 @@ function love.load()
     ]]
     math.randomseed(os.time())
 
+    camera = Camera()
+
     -- init -> screen generation--
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
-        fullscreen = true,
+        fullscreen = false,
         vsync = true,
-        resizable = true
+        resizable = false,
+        
     })
 
     -- load images and animation--
@@ -56,6 +67,10 @@ function love.resize(w, h)
 end
 
 function love.keypressed(key)
+    
+    if key  == 'f' then 
+        shake_timer = shake_duration
+    end 
     if key == 'escape' then
         love.event.quit()
     end
@@ -66,7 +81,21 @@ function love.keyboard.wasPressed(key)
     return love.keyboard.keysPressed[key]
 end
 
+local xc=0
+
 function love.update(dt)
+    xc=xc+1
+
+    camera:lookAt(love.graphics.getWidth() / 2,love.graphics.getHeight() / 2)
+
+    if shake_timer > 0 then
+        shake_timer = math.max(0,shake_timer - dt)
+        shake_offset_x = love.math.random(-shake_intensity, shake_intensity)
+        shake_offset_y = love.math.random(-shake_intensity, shake_intensity)
+    else 
+        shake_offset_x, shake_offset_y = 0, 0
+      
+    end
 
     Timer.update(dt)
     gStateStack:update(dt)
@@ -87,6 +116,8 @@ end
 
 function love.draw()
     push:start()
+ 
     gStateStack:render()
+  
     push:finish()
 end

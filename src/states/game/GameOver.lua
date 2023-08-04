@@ -90,7 +90,7 @@ end
 function GameOver:render()
     love.graphics.setBackgroundColor(1, 1, 1, 0.2)
     love.graphics.setColor(1, 1, 1)
-    love.graphics.setFont(love.graphics.newFont(24)) -- Adjust font size as desired
+    love.graphics.setFont(love.graphics.newFont("font.otf",24)) -- Adjust font size as desired
 
     love.graphics.setLineWidth(5)
     love.graphics.rectangle('line', 40, 80, 1280 - 80, 270, 30)

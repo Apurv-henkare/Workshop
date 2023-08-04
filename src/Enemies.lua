@@ -72,10 +72,10 @@ end
 function Enemies:update(dt)
 
     if counter_var == 1 then
-        if self.timer >= 0.05 then
+        if self.timer >= 0.09 then
             self.flag =1
         else
-            self.timer = math.min(0.05, self.timer + 0.001 * dt)
+            self.timer = math.min(0.09, self.timer + 0.001 * dt)
 
             if math.random() < self.timer then
                 table.insert(self.Many_Enemies, self:CreateEnemy())
@@ -137,7 +137,7 @@ function Enemies:update(dt)
 
         elseif counter_var == 1 then
             enemy.y = enemy.y + enemy.speed * dt
-            enemy.speed = enemy.speed + 500 * dt
+            enemy.speed = enemy.speed + 900 * dt
         end
 
         if counter_var == 1 then
@@ -233,7 +233,7 @@ function Enemies:CreateAlienBullet(enemy, player)
     Bullet.speed = 400
 
 
-    Bullet.angle =  math.atan2((player.y - (player.width / 2)) - enemy.y, (player.x -(player.width / 2)) - enemy.x)
+    Bullet.angle =  math.atan2((player.y - (player.height / 2)) - enemy.y, (player.x -(player.width / 2)) - enemy.x)
     return Bullet
 end
 

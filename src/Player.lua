@@ -1,9 +1,14 @@
 Player = Class {
     __includes = BaseState
 }
+
+-- local shakeDuration = 0.5
+-- local shakeIntensity = 5
 local rotationAngle = 0
 
 function Player:init()
+
+    self.shakeDirection = 1
 
     self.width = 65
     self.height = 90
@@ -19,11 +24,14 @@ function Player:init()
     self.exp1 = love.graphics.newImage('sprites/exp1.png')
 
     self.shot = love.audio.newSource('music/shot.mp3', 'static')
+    self.alert = love.audio.newSource('music/alert.mp3', 'static')
     self.shot:setVolume(0.05)
 
     self.health_bar_x = self.x - 65 / 2
     self.health_bar_y = self.y - 10
     self.health_bar_width = 135
+
+    -- camera=Camera()
 
     self.img = love.graphics.newImage('sprites/part.png')
 
@@ -65,7 +73,8 @@ function Player:update(dt)
     end
 
     if love.keyboard.wasPressed('space') then
-        table.insert(self.Many_Bullets, self:CreateBullets())
+       -- table.insert(self.Many_Bullets, self:CreateBullets())
+        self:CreateBullets()
         self.shot:stop()
         self.shot:play()
 
@@ -75,6 +84,7 @@ function Player:update(dt)
     for keys, values in pairs(self.Many_Bullets) do
 
         values.y = values.y - values.speed * dt
+
         --- deletion as they cross screen
         if values.y < -values.height then
             table.remove(self.Many_Bullets, keys)
@@ -86,21 +96,48 @@ function Player:update(dt)
 
     self.health_bar_width = math.max(0, self.health_bar_width)
 
+  
+
     -- self.health_bar_width=self.health_bar_width-dt
 
     --  player.animation:update(dt)
+
+    -- self:shakeScreen(10, 100 * dt,self.x,self.y) 
     self.animation:update(dt)
 
 end
 
 function Player:CreateBullets()
-    local Bullet = {}
-    Bullet.width = 10
-    Bullet.height = 17
-    Bullet.y = self.y
-    Bullet.x = self.x + (self.width / 2) - (Bullet.width / 2)
-    Bullet.speed = 1200
-    return Bullet
+
+    local Bullet1 = {}
+    Bullet1.width = 10
+    Bullet1.height = 17
+    Bullet1.y = self.y
+    Bullet1.x = self.x + (self.width / 2) - (Bullet1.width / 2)
+    Bullet1.speed = 1200 
+    Bullet1.type="center"
+
+    local Bullet2 = {}
+    Bullet2.width = 10
+    Bullet2.height = 17
+    Bullet2.y = self.y
+    Bullet2.x = self.x - (Bullet2.width/3)
+    Bullet2.speed = 1200 
+    Bullet2.type="left"
+
+    local Bullet3 = {}
+    Bullet3.width = 10
+    Bullet3.height = 17
+    Bullet3.y = self.y
+    Bullet3.x = self.x + (self.width) -(Bullet3.width)
+    Bullet3.speed = 1200 
+    Bullet3.type="right"
+
+
+
+    table.insert(self.Many_Bullets,Bullet1)
+   
+
 end
 
 function Player:render()
@@ -111,6 +148,7 @@ function Player:render()
         love.graphics.setColor(1, 1, 1)
         love.graphics.draw(self.bullet_image, values.x, values.y)
     end
+
 
     love.graphics.setColor(0, 1, 0)
 
@@ -123,8 +161,18 @@ function Player:render()
 
     love.graphics.setColor(1, 1, 1)
 
+    camera:attach()
+
+    camera:move(shake_offset_x, shake_offset_y)
+
+    if shake_timer>0 or self.health_bar_width<25 then 
+        love.graphics.setColor(1,0.5,0)
+    else
+        love.graphics.setColor(1,1,1)
+    end 
+
     if self.health_bar_width > 0 then
-        --love.graphics.rectangle("line", self.x,self.y,self.width,self.height)
+        -- love.graphics.rectangle("line", self.x,self.y,self.width,self.height)
         self.animation:draw(sprites.playerSheet, self.x + self.width / 2, self.y + self.height / 2, math.rad(0), 1, 1,
             self.width / 2, self.height / 2)
         love.graphics.draw(psystem, self.x + 20, self.y + self.height)
@@ -132,6 +180,8 @@ function Player:render()
     else
         love.graphics.draw(self.exp1, self.x + self.width / 2, self.y)
     end
+
+    camera:detach()
 
 end
 

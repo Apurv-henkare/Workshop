@@ -11,9 +11,10 @@ function PlayState:init()
     self.bg2 = 0
 
     self.player = Player()
+
     self.enemies = Enemies()
 
-    self.angle=0
+    self.angle = 0
     self.bg_image = love.graphics.newImage('sprites/bg5.jpg')
     self.bg2_image = love.graphics.newImage('sprites/planet.png')
 
@@ -30,7 +31,7 @@ function PlayState:init()
             squard1.y = (j) * 60 - 1000
             squard1.speed = 200
             squard1.width = 60
-            squard1.type="alien"
+            squard1.type = "alien"
             squard1.height = 60
 
             squard1.ix = i
@@ -52,12 +53,10 @@ end
 
 function PlayState:update(dt)
 
-
-    
     self.player:update(dt)
     self.enemies:update(dt)
 
-    --print(counter_var)
+    -- print(counter_var)
 
     -- game over condition--
     if self.player.health_bar_width <= 0 then
@@ -71,11 +70,9 @@ function PlayState:update(dt)
     self.bg2 = (self.bg2 + 40 * dt) % 6000
 
     -- varies the attack/bullet patterns of the enemies~Level-2--
-    local arr = {0.001, 0.005, 0.009, 0.08, 0.02, 0.1}
+    local arr = {0.001, 0.005, 0.009, 0.08, 0.1, 0.39}
 
     for k, v in pairs(self.enemies.Many_Enemies) do
-
-      
 
         if counter_var == 2 and v.fire == 1 then
 
@@ -87,9 +84,8 @@ function PlayState:update(dt)
 
         elseif counter_var == 3 then
 
-
             local array = {300, 200, 100, 190, 290, 150}
-            local array_speed = {100, 150, 200, 250, 300, 350}
+            local array_speed = {290, 340, 500, 400, 300, 350}
 
             if v.x <= -100 then
 
@@ -105,15 +101,15 @@ function PlayState:update(dt)
 
             end
 
-          --  print(v.dir,"hello",#gStateStack)
+            --  print(v.dir,"hello",#gStateStack)
 
             if v.dir == -1 then
-            
+
                 v.x = math.max(-100, v.x + v.speed * dt)
             else
-             
-                v.x = math.min(1280,v.x + v.speed * dt)
-                
+
+                v.x = math.min(1280, v.x + v.speed * dt)
+
             end
 
             if math.random() < arr[math.random(1, 6)] then
@@ -138,7 +134,7 @@ function PlayState:update(dt)
                 self.enemies:ParticleSystem(_enemy.x + _enemy.width / 2, _enemy.y + _enemy.height / 2)
 
                 _enemy.health = _enemy.health - 1
-                print(_enemy.health)
+                -- print(_enemy.health)
 
                 table.insert(self.store, {
                     ix = _enemy.ix,
@@ -162,13 +158,12 @@ function PlayState:update(dt)
         if checkCollision(_bullet.x, _bullet.y, _bullet.width, _bullet.height, self.player.x, self.player.y,
             self.player.width, self.player.height) then
 
+            shake_timer = shake_duration
             table.remove(self.enemies.Many_b, key)
             self.player.health_bar_width = self.player.health_bar_width - 1
             break
         end
     end
-     
-  
 
     ---- Collision between Enemies and Player
     for i, _enemy in pairs(self.enemies.Many_Enemies) do
@@ -179,14 +174,17 @@ function PlayState:update(dt)
             self.enemies:ParticleSystem(_enemy.x + _enemy.width / 2, _enemy.y + _enemy.height / 2)
             table.remove(self.enemies.Many_Enemies, i)
 
+            shake_timer = shake_duration
+
             if _enemy.type == "alien" or _enemy.type == "boss" then
                 self.enemies.exp:stop()
-            self.enemies.exp:play()
-            gStateStack:push(GameOver())
-                
-            else 
+                self.enemies.exp:play()
+                self.player.health_bar_width=0
+                gStateStack:push(GameOver())
+
+            else
                 self.player.health_bar_width = self.player.health_bar_width - 15 * (_enemy.width / 40)
-            end 
+            end
 
             break
         end
@@ -206,13 +204,19 @@ function PlayState:update(dt)
 end
 
 function PlayState:render()
+    -- camera:attach()
+    camera:move(shake_offset_x, shake_offset_y)
     love.graphics.draw(self.bg_image, 0, -2560 + self.bg1, nil, 1, 1)
     love.graphics.setColor(1, 1, 1, 0.8)
     love.graphics.draw(self.bg2_image, 0, -4000 + self.bg2, nil, 1, 1)
     love.graphics.setColor(1, 1, 1, 1)
     -- love.graphics.print(self.enemies.Many_Enemies[1].x)
     self.enemies:render()
+
+    -- Draw the shaking rectangle
+
     self.player:render()
+    -- camera:detach()
 
 end
 
