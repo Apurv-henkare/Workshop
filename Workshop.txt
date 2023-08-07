@@ -1,0 +1,35 @@
+
+1.Game Loops -cs50 notes
+2 2d coordinates system 
+3.Lua - Basic of Scripting language
+4.Love2d - demo draw rectangel 
+
+5. Delta Time -sheepoluttion 
+6. AABB collision - youtube -maths 
+7. Demo of Bullets: :- tables concept.
+8. Angle atan2()  - sheepolution  
+9. Sprites    
+
+----- Game making behind the scene -----  
+1. main.lua :   Math.randomseed(os.time()) : Challacade short Video 
+                     StateStack very important 
+	     math.random vs love.math.random() 
+
+2. States: class.lua cs50 edx OOps
+               basestate.lua and inheritance and interface 
+
+	1. Modulo Looping effect 
+	2. State Flow Main Menu. 
+
+	
+	
+	    
+
+
+
+
+
+
+
+
+
