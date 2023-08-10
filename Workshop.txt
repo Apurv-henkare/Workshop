@@ -1,14 +1,13 @@
-
-1.Game Loops -cs50 notes
-2 2d coordinates system 
-3.Lua - Basic of Scripting language
-4.Love2d - demo draw rectangel 
-
-5. Delta Time -sheepoluttion 
+1. Game Loops -cs50 notes 
+2. 2d coordinates system -/
+3. Lua - Basic of Scripting language -/
+4. Love2d - demo draw rectangle -/
+5. Delta Time -sheepoluttion -/ [https://youtu.be/yGhfUcPjXuE, https://drewcampbell92.medium.com/understanding-delta-time-b53bf4781a03]
 6. AABB collision - youtube -maths 
 7. Demo of Bullets: :- tables concept.
-8. Angle atan2()  - sheepolution  
+8. Angle atan2()  - sheepolution -/ [Enemies: 118-123 Bullet direction using atan2.]
 9. Sprites    
+10. Enemies Spawning 
 
 ----- Game making behind the scene -----  
 1. main.lua :   Math.randomseed(os.time()) : Challacade short Video 
@@ -16,10 +15,29 @@
 	     math.random vs love.math.random() 
 
 2. States: class.lua cs50 edx OOps
-               basestate.lua and inheritance and interface 
+        basestate.lua and inheritance and interface 
 
+	Main Menu
 	1. Modulo Looping effect 
-	2. State Flow Main Menu. 
+	2. State Flow Main Menu.
+	3. 14-19 Init Explaination
+	4. What is modulo function
+
+	Play State:
+
+	Player :
+	1. 38-47 Particle System (Imp!)
+	2. 59-81 math.min and math.max 
+	3. why we used if and if not if and else.
+	4. start stop for sound effects
+	5. animation.draw why use self.x + self.width/2
+
+	Enemies :
+	
+	
+	
+	 
+
 
 	
 	
