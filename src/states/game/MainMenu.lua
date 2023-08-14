@@ -13,7 +13,7 @@ local highlighted = 1
 
 function MainMenu:init()
     self.image = love.graphics.newImage('sprites/menu.jpg')
-    counter_var = 1
+    counter_var = 0
 
 end
 
