@@ -71,6 +71,8 @@ end
 
 function Enemies:update(dt)
 
+    rotationAngle=(rotationAngle+100*dt)%360
+
     if counter_var == 1 then
         if self.timer >= 0.09 then
             self.flag =1
@@ -103,8 +105,7 @@ function Enemies:update(dt)
             dir = 1
         }}
 
-       
-        --counter_var = 5
+    
     end
 
     ---change state 
@@ -115,23 +116,16 @@ function Enemies:update(dt)
     end 
  
 
-    for keys, _bullet in pairs(self.Many_b) do
+    if counter_var == 2 then
+        self.shift1 = math.min(1000, self.shift1 + self.speed * dt)
+    end 
 
-        _bullet.x = (_bullet.x + 700* math.cos(_bullet.angle)*dt)
-        _bullet.y = (_bullet.y + 800* math.sin(_bullet.angle)*dt)
-
-    end
-
-    -- local count = 0
-    -- local temp = 0
 
     for i, enemy in pairs(self.Many_Enemies) do
 
         if counter_var == 2 then
 
-            self.shift1 = math.min(120000, self.shift1 + self.speed * dt)
-
-            if self.shift1 < 120000 then
+            if self.shift1 < 1000 then
                 enemy.y = enemy.y + enemy.speed * dt
             end
 
@@ -232,6 +226,12 @@ function Enemies:CreateAlienBullet(enemy, player)
     Bullet.x = enemy.x + (enemy.width / 2) - (Bullet.width / 2)
     Bullet.speed = 400
 
+    Bullet.py= player.y
+    Bullet.px= player.x 
+
+    Bullet.ey= enemy.y
+    Bullet.ex= enemy.x 
+
 
     Bullet.angle =  math.atan2((player.y - (player.height / 2)) - enemy.y, (player.x -(player.width / 2)) - enemy.x)
     return Bullet
@@ -251,7 +251,7 @@ function Enemies:render()
 
         if counter_var == 1 then
             self.animation:draw(sprites.enemySheet, values.x + values.width / 2, values.y + values.height / 2,
-                math.rad(love.timer.getTime()), 1 * values.width / 60, values.height / 60,
+                math.rad(rotationAngle), 1 * values.width / 60, values.height / 60,
                 (values.width / (2 * values.width / 60)), (values.width / (2 * values.width / 60)))
 
         else

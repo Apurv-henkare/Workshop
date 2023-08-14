@@ -155,6 +155,13 @@ function PlayState:update(dt)
 
     -- This for loop detetc enemy bullet and player collision
     for key, _bullet in pairs(self.enemies.Many_b) do
+
+        
+        local angle=math.atan2(self.player.y-_bullet.ey,self.player.x-_bullet.ex)
+
+        _bullet.x = (_bullet.x + 900* math.cos(angle)*dt)
+        _bullet.y = (_bullet.y + 900* math.sin(angle)*dt)
+
         if checkCollision(_bullet.x, _bullet.y, _bullet.width, _bullet.height, self.player.x, self.player.y,
             self.player.width, self.player.height) then
 
@@ -163,6 +170,11 @@ function PlayState:update(dt)
             self.player.health_bar_width = self.player.health_bar_width - 1
             break
         end
+
+        if _bullet.y >720 or _bullet.y <-10 then 
+            table.remove(self.enemies.Many_b,key)
+        end 
+        
     end
 
     ---- Collision between Enemies and Player

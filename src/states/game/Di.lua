@@ -34,6 +34,7 @@ function Di:init()
               "Congratulations to Captain Apurv and the formidable spacecraft, Vajra, for their historic feat",
               "Their bravery and skill have saved countless lives"}
     }
+    
     self.currentText2 = ""
     self.currentIndex2 = 1
     self.timer2 = 0
