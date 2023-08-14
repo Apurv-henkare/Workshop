@@ -33,14 +33,17 @@
 	5. animation.draw why use self.x + self.width/2
 
 	Enemies :
+	1. Delete enemies when out of bound.
+	2. Particle system.
 	
-	
-	
-	 
 
-
+	Playstate:
+	1. Paralax
+	2. Enemies firing status.
 	
-	
+	Dialogue: 
+	1. Leave to Apurv.
+	              
 	    
 
 
