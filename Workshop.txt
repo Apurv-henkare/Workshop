@@ -7,7 +7,10 @@
 7. Demo of Bullets: :- tables concept.
 8. Angle atan2()  - sheepolution -/ [Enemies: 118-123 Bullet direction using atan2.]
 9. Sprites    
-10. Enemies Spawning 
+10. Enemies Spawning
+
+*. Extra Resources - Maths for Game Devs by Freya Holmér -/ [https://youtube.com/playlist?list=PLImQaTpSAdsArRFFj8bIfqMk2X7Vlf3XF]
+                   - Latest Grossing Indie Game with a great AI ecosystem (Rain World) -/ [https://youtu.be/6Ji2q3WQE78]
 
 ----- Game making behind the scene -----  
 1. main.lua :   Math.randomseed(os.time()) : Challacade short Video 
@@ -38,7 +41,7 @@
 	
 
 	Playstate:
-	1. Paralax
+	1. Parallax
 	2. Enemies firing status.
 	
 	Dialogue: 
