@@ -3,13 +3,10 @@ counter_var = 0
 
 require 'src/Dependencies'
 
-
- shake_duration = 0.5
- shake_intensity = 10
- shake_timer = 0
- shake_offset_x, shake_offset_y = 0, 0
-
-local rectangle = { x = 200, y = 150, width = 100, height = 80 }
+shake_duration = 0.5
+shake_intensity = 10
+shake_timer = 0
+shake_offset_x, shake_offset_y = 0, 0
 
 -- Global variables--
 
@@ -30,7 +27,6 @@ function love.load()
         fullscreen = false,
         vsync = true,
         resizable = false,
-        
     })
 
     -- load images and animation--
@@ -81,10 +77,7 @@ function love.keyboard.wasPressed(key)
     return love.keyboard.keysPressed[key]
 end
 
-local xc=0
-
 function love.update(dt)
-    xc=xc+1
 
     camera:lookAt(love.graphics.getWidth() / 2,love.graphics.getHeight() / 2)
 
@@ -105,6 +98,7 @@ function love.update(dt)
     love.keyboard.keysPressed = {}
 end
 
+-- Distance function
 function Distance(x1, y1, x2, y2)
     return math.sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2)
 end
@@ -114,6 +108,7 @@ function checkCollision(x1, y1, w1, h1, x2, y2, w2, h2)
     return x1 < x2 + w2 and x2 < x1 + w1 and y1 < y2 + h2 and y2 < y1 + h1
 end
 
+-- Rendering everything in the statestack
 function love.draw()
     push:start()
  
