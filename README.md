@@ -1,10 +1,10 @@
-# Game Development Workshop by GameDevUtopia
+# Workshop by GameDevUtopia
 
 <p align = "center">
 <img src = "Resources/Images/GDUlogo.jpg" alt="GameDevUtopia logo" width="320" height = "320">
 </P>
 
-Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development club at Pune Institute of Computer Technology (PICT), Pune. In collaboration with **IIT Delhi**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.
+Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development community at **Pune Institute of Computer Technology (PICT), Pune** and **Indian Institute of Information Technology, Kottayam (IITK)**. In collaboration with **IIT Delhi**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.🎮
 
 ## Workshop Details
 
@@ -14,7 +14,7 @@ Welcome to the Game Development Workshop organized by **GameDevUtopia**, the gam
 
 ## About GameDevUtopia
 
-GameDevUtopia is a passionate community of game developers and enthusiasts which came to fruition at PICT, Pune. Our mission is to foster a love for game development, provide a platform for learning and collaboration, and create amazing games together. With a team of experienced mentors and talented members, we are dedicated to helping you explore the art and science of game development.
+GameDevUtopia is a passionate game development community operating in Pune Institute of Computer Technology, Pune, and Indian Institute of Information Technology, Kottayam. With a passion for fostering creativity and innovation in the game development realm, GameDevUtopia aims to empower individuals interested in game development by offering guidance, resources, and a platform to showcase their talent.
 
 ## Workshop Highlights
 
@@ -22,6 +22,18 @@ GameDevUtopia is a passionate community of game developers and enthusiasts which
 - **Interactive Sessions:** Engage in interactive discussions with our experienced mentors and fellow participants. Ask questions, share ideas, and learn together.
 
 - **Networking:** Connect with like-minded individuals who share your passion for game development. Build relationships that could lead to future collaborations.
+
+## How to Use This Repository
+
+This repository is organized to provide easy access to all the workshop-related resources, materials, and code samples. Here's how you can navigate through the repository:
+
+- **Workshop Game:** The complete code for the game showcased in the workshop is available in the [`Game`](/Game) directory.
+- **Resources:** All the necessary materials for the workshop are available in the [`Resources`](/Resources) directory.
+- **Workshop Slides:** Find presentation slides from each workshop session in the [`Resources/PPT`](/Resources/PPT) directory.
+- **Code Snippets:** Access the code snippets discussed during the workshop in the [`Resources/Code Snippets`](/Resources/Code-Snippets) directory.
+- **Useful Links and Explainations:** Discover a curated list of resources, references, and websites in the [`Resources/Workshop-Topics`](/resources/Workshop-Topics) section.
+
+Feel free to explore the folders according to your needs and interests. Happy learning and creating!
 
 ## Agenda
 
@@ -46,7 +58,7 @@ To register for the workshop, please visit [Registration Link](google.com). Hurr
 For any inquiries or more information, feel free to reach out to us:
 
 - Email: [Email Address]
-- Follow us on [Instagram](https://www.instagram.com/gamedevutopia/) for updates.
+- Follow us on Instagram at [GameDevUtopia](https://www.instagram.com/gamedevutopia/) and [GameDevUtopia_IITK](https://www.instagram.com/gamedevutopia_iiitk/) for updates.
 
 Let's embark on a journey to unlock the magic of game development together! Get ready to level up your skills and create the games you've always dreamed of. See you at the workshop! 🎮🚀
 
