@@ -79,7 +79,7 @@ function PlayState:update(dt)
             if math.random() < arr[math.random(1, 3)] then
                 self.enemy_shot:stop()
                 self.enemy_shot:play()
-                table.insert(self.enemies.Many_b, self.enemies:CreateAlienBullet(v, self.player))
+                table.insert(self.enemies.Many_Bullets, self.enemies:CreateAlienBullet(v, self.player))
             end
 
         elseif counter_var == 3 then
@@ -115,7 +115,7 @@ function PlayState:update(dt)
             if math.random() < arr[math.random(1, 6)] then
                 self.enemy_shot:stop()
                 self.enemy_shot:play()
-                table.insert(self.enemies.Many_b, self.enemies:CreateAlienBullet(v, self.player))
+                table.insert(self.enemies.Many_Bullets, self.enemies:CreateAlienBullet(v, self.player))
             end
         end
 
@@ -123,7 +123,7 @@ function PlayState:update(dt)
     end
 
     -- Detection logic for player and enemies --
-    for i, _bullet in pairs(self.player.Many_Bullets) do
+    for i, _bullet in pairs(self.player.Many_Bulletsullets) do
         for j, _enemy in pairs(self.enemies.Many_Enemies) do
             if checkCollision(_bullet.x, _bullet.y, _bullet.width, _bullet.height, _enemy.x, _enemy.y, _enemy.width,
                 _enemy.height) then
@@ -141,7 +141,7 @@ function PlayState:update(dt)
                     iy = _enemy.iy - 1
                 })
 
-                table.remove(self.player.Many_Bullets, i)
+                table.remove(self.player.Many_Bulletsullets, i)
                 if (_enemy.health <= 0) then
                     table.remove(self.enemies.Many_Enemies, j)
                 end
@@ -151,10 +151,10 @@ function PlayState:update(dt)
         end
     end
 
-    -- !!Change the variable "Many_b" name 
+    -- !!Change the variable "Many_Bullets" name 
 
     -- This for loop detetc enemy bullet and player collision
-    for key, _bullet in pairs(self.enemies.Many_b) do
+    for key, _bullet in pairs(self.enemies.Many_Bullets) do
 
         
         local angle=math.atan2(self.player.y-_bullet.ey,self.player.x-_bullet.ex)
@@ -166,13 +166,13 @@ function PlayState:update(dt)
             self.player.width, self.player.height) then
 
             shake_timer = shake_duration
-            table.remove(self.enemies.Many_b, key)
+            table.remove(self.enemies.Many_Bullets, key)
             self.player.health_bar_width = self.player.health_bar_width - 1
             break
         end
 
         if _bullet.y >720 or _bullet.y <-10 then 
-            table.remove(self.enemies.Many_b,key)
+            table.remove(self.enemies.Many_Bullets,key)
         end 
         
     end

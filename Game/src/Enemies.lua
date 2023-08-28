@@ -11,7 +11,7 @@ function Enemies:init()
     self.Many_Enemies = {}
 
     -- change name
-    self.Many_b = {}
+    self.Many_Bullets = {}
 
     self.animation = animations.idle
     self.boss = animations.boss
@@ -240,7 +240,7 @@ end
 function Enemies:render()
     love.graphics.setColor(0, 1, 1)
 
-    for keys, values in pairs(self.Many_b) do
+    for keys, values in pairs(self.Many_Bullets) do
         love.graphics.draw(self.enemy_bullet_image, values.x, values.y)
     end
 
