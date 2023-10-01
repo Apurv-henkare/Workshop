@@ -4,7 +4,7 @@
 <img src = "Resources/Images/GDUlogo.jpg" alt="GameDevUtopia logo" width="320" height = "320">
 </P>
 
-Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development community at **Pune Institute of Computer Technology (PICT), Pune** and **Indian Institute of Information Technology, Kottayam (IITK)**. In collaboration with **IIT Delhi**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.🎮
+Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development community at **Pune Institute of Computer Technology (PICT), Pune** and **Indian Institute of Information Technology, Kottayam (IITK)**. In collaboration with **Indian Institute of Information Technology, Nagpur (IIITN)**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.🎮
 
 ## Workshop Details
 
@@ -37,7 +37,7 @@ Feel free to explore the folders according to your needs and interests. Happy le
 
 ## Agenda
 
-- Introduction to GameDevUtopia and IIT Delhi collaboration.
+- Introduction to GameDevUtopia and IIIT Nagpur collaboration.
 - Understanding the game development pipeline.
 - Basics of game design and gameplay mechanics.
 - Graphics and audio essentials for games.
