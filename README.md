@@ -6,11 +6,6 @@
 
 Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development community at **Pune Institute of Computer Technology (PICT), Pune** and **Indian Institute of Information Technology, Kottayam (IITK)**. In collaboration with **Indian Institute of Information Technology, Nagpur (IIITN)**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.🎮
 
-## Workshop Details
-
-- **Date:** [Workshop Dates]
-- **Time:** [Workshop Timings]
-- **Location:** [Workshop Location]
 
 ## About GameDevUtopia
 
