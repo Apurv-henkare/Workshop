@@ -43,9 +43,6 @@ Feel free to explore the folders according to your needs and interests. Happy le
 - Graphics and audio essentials for games.
 - Q&A and networking session.
 
-## Registration
-
-To register for the workshop, please visit [Registration Link](google.com). Hurry, as the seats are limited and filling up quickly!
 
 ## Prerequisites
 
@@ -57,8 +54,10 @@ To register for the workshop, please visit [Registration Link](google.com). Hurr
 
 For any inquiries or more information, feel free to reach out to us:
 
-- Email: [Email Address]
+- Email: gamedevutopia@gmail.com
+- Follow us on LinkedIn at [GameDevUtopia](https://www.linkedin.com/company/gamedevutopia/)
 - Follow us on Instagram at [GameDevUtopia](https://www.instagram.com/gamedevutopia/) and [GameDevUtopia_IITK](https://www.instagram.com/gamedevutopia_iiitk/) for updates.
+
 
 Let's embark on a journey to unlock the magic of game development together! Get ready to level up your skills and create the games you've always dreamed of. See you at the workshop! 🎮🚀
 
