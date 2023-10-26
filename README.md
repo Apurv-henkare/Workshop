@@ -46,7 +46,7 @@ Feel free to explore the folders according to your needs and interests. Happy le
 - Enthusiasm to learn and dive into the world of game development! 
 
 
-## UseFull Resources
+## UseFul Resources
 
 - CS50 Game Development Course at [CS50's Introduction to Game Development](https://www.youtube.com/watch?v=b16rgLIf8I4&list=PLhQjrBD2T383Vx9-4vJYFsJbvZ_D17Qzh)
 - Sheepollution For Core Concepts at [HOW TO LOVE](https://sheepolution.com/learn/book/0)
@@ -60,7 +60,7 @@ For any inquiries or more information, feel free to reach out to us:
 
 - Email: gamedevutopia@gmail.com
 - Follow us on LinkedIn at [GameDevUtopia](https://www.linkedin.com/company/gamedevutopia/)
-- Follow us on Instagram at [GameDevUtopia_PICT](https://www.instagram.com/gamedevutopia/) and [GameDevUtopia_IITK](https://www.instagram.com/gamedevutopia_iiitk/) for updates.
+- Follow us on Instagram at [GameDevUtopia_PICT](https://www.instagram.com/gamedevutopia/) and [GameDevUtopia_IIITK](https://www.instagram.com/gamedevutopia_iiitk/) for updates.
 
 
 Let's embark on a journey to unlock the magic of game development together! Get ready to level up your skills and create the games you've always dreamed of. See you at the workshop! 🎮🚀
