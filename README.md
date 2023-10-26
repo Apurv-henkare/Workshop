@@ -26,7 +26,7 @@ This repository is organized to provide easy access to all the workshop-related 
 - **Resources:** All the necessary materials for the workshop are available in the [`Resources`](/Resources) directory.
 - **Workshop Slides:** Find presentation slides from each workshop session in the [`Resources/PPT`](/Resources/PPT) directory.
 - **Code Snippets:** Access the code snippets discussed during the workshop in the [`Resources/Code Snippets`](/Resources/Code-Snippets) directory.
-- **Useful Links and Explainations:** Discover a curated list of resources, references, and websites in the [`Resources/Workshop-Topics`](/resources/Workshop-Topics) section.
+
 
 Feel free to explore the folders according to your needs and interests. Happy learning and creating!
 
@@ -43,7 +43,16 @@ Feel free to explore the folders according to your needs and interests. Happy le
 
 - Basic programming knowledge (any language).
 - Laptop with required software (details will be provided upon registration).
-- Enthusiasm to learn and dive into the world of game development!
+- Enthusiasm to learn and dive into the world of game development! 
+
+
+## UseFull Resources
+
+- CS50 Game Development Course at [CS50's Introduction to Game Development](https://www.youtube.com/watch?v=b16rgLIf8I4&list=PLhQjrBD2T383Vx9-4vJYFsJbvZ_D17Qzh)
+- Sheepollution For Core Concepts at [HOW TO LOVE](https://sheepolution.com/learn/book/0)
+- Kyle Schaub Paid Udemy Course [Udemy Course](https://www.udemy.com/course/lua-love/)
+- LOVE Official Documentation [Official Website](https://love2d.org/)
+- Lua Scripting Quick Tour [Overview Of Lua](https://github.com/pohka/Lua-Beginners-Guide)
 
 ## Contact Us
 
