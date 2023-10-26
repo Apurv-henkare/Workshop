@@ -4,7 +4,7 @@
 <img src = "Resources/Images/GDUlogo.jpg" alt="GameDevUtopia logo" width="320" height = "320">
 </P>
 
-Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development community at **Pune Institute of Computer Technology (PICT), Pune** and **Indian Institute of Information Technology, Kottayam (IITK)**. In collaboration with **Indian Institute of Information Technology, Nagpur (IIITN)**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.🎮
+Welcome to the Game Development Workshop organized by **GameDevUtopia**, the game development community at **Pune Institute of Computer Technology (PICT), Pune** and **Indian Institute of Information Technology, Kottayam (IIITK)**. In collaboration with **Indian Institute of Information Technology, Nagpur (IIITN)**, we are excited to bring you an immersive workshop that will dive into the exciting world of game development.🎮
 
 
 ## About GameDevUtopia
