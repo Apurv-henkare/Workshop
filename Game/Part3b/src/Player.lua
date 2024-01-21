@@ -21,7 +21,7 @@ function Player:init()
     self.bullet_image = love.graphics.newImage('sprites/blt.png')
 
     self.shot = love.audio.newSource('music/shot.mp3', 'static')
-    self.shot:setVolume(0.05)
+    self.shot:setVolume(0.09)
 
     self.animation = animations.player_idle
     self.img = love.graphics.newImage('sprites/part.png')
@@ -113,7 +113,7 @@ function Player:render()
 
     end
 
-    love.graphics.rectangle("fill", self.x, self.y, 2, 2)
+    --love.graphics.rectangle("fill", self.x, self.y, 2, 2)
 
     love.graphics.setColor(0, 1, 0)
 

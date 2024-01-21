@@ -8,9 +8,9 @@ shake_offset_x, shake_offset_y = 0, 0
 function love.load()
     -- init -> screen generation--
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
-        fullscreen = false,
+        fullscreen = true,
         vsync = true,
-        resizable = true
+        resizable = false
     })
 
     -- load images and animation--
@@ -43,7 +43,7 @@ function love.load()
     -- load music--
     song = love.audio.newSource('music/background_music.mp3', 'stream')
 
-    song:setVolume(0.1)
+    song:setVolume(0.6)
     song:setLooping(true)
     song:play()
 

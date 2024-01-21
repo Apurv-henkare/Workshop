@@ -15,7 +15,7 @@
 local highlighted = 1
 
 function MainMenu:enter(params)
-    glevel=1
+    glevel=0
     print("main")
 end
 

@@ -45,7 +45,7 @@ function DialogueState:init()
     end
 
     self.typing = love.audio.newSource('music/typing.mp3', 'static')
-    self.typing:setVolume(0.1)
+    self.typing:setVolume(0.3)
 
     -- self.image = love.graphics.newImage('sprites/credits.jpg')
 end

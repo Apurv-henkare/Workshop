@@ -28,7 +28,7 @@ function Levels:CreateAsteriods()
     Enemy.type = "Asteriod"
     Enemy.fire = -1
     Enemy.dir = 1
-    Enemy.speed = math.random(80, 1550)
+    Enemy.speed = math.random(80, 900)
     Enemy.col = false
     Enemy.rotate = math.random(10, 400)
     return Enemy
@@ -72,7 +72,7 @@ end
 function Levels:Boss()
     local Boss = {{
         x = 300,
-        y = 130,
+        y = -130,
         width = 100,
         height = 130,
         speed = 300,

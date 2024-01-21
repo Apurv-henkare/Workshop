@@ -216,7 +216,7 @@ function PlayState:render()
     self.player:render()
 
     love.graphics.setColor(1, 1, 1, 1)
-    love.graphics.print("Play State", 100, 100)
+  --  love.graphics.print("Play State", 100, 100)
     love.graphics.setColor(1, 1, 1, 1)
 
     -- love.graphics.draw(self.image, 0, 0)

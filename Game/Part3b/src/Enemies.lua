@@ -18,7 +18,7 @@ function Enemies:init()
     self.shift1 = 0
 
     -- Timer of each level 
-    self.level1_timer = 0.2
+    self.level1_timer = 0.09
 
     self.flag = 0
 
